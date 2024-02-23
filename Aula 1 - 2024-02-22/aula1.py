@@ -56,9 +56,9 @@ ano_final = ano_inicial + 3
 # resto = total_pedacos % 12
 # pizzas = 0
 # if resto > 0:
-#     pizzas = int(total_pedacos / 12) + 1
+#     pizzas = int(total_pedacos // 12) + 1
 # else:
-#     pizzas = int(total_pedacos / 12)
+#     pizzas = total_pedacos // 12
 # print(f"Serão necessárias {pizzas} pizzas")
 
 # Exercício 4.b:
