@@ -75,6 +75,21 @@ ano_final = ano_inicial + 3
 # descobrir como imprimir na tela um texto informado
 # ao contrário? Por exemplo, se o usuário digitar “Olá!”,
 # o seu inverso é “!ÁlO”.
-texto = input("Digite o texto a ser invertido: ")
-novo_texto = "".join(reversed(texto))
-print(novo_texto)
+# texto = input("Digite o texto a ser invertido: ")
+# novo_texto = "".join(reversed(texto))
+# print(novo_texto)
+
+# Exercício 6:
+# O medidor de tempo de um experimento secreto está quebrado e você precisa urgentemente saber quanto tempo em segundos foi transcorrido.
+# Para isso, escreva um programa que receba um número X de minutos e imprima a quantos segundo o valor X corresponde:
+# minutes = int(input("Quantos miutos você quer: "))
+# to_seconds = minutes * 60
+# print(f"Isso dá {to_seconds} segundos")
+
+# Exercício 7:
+# Crie um programa que informa qual é o consumo médio de combustível por um veículo dados a
+# distância total percorrida (Km) e a quantidade de combustível gasta (em litros).
+distance = int(input("Digite a distância em Km da viagem: "))
+gas = int(input("Digite a quantidade de combustível gasta: "))
+media = distance / gas
+print(f"A média de combustível é {media:.2f} km/l")
