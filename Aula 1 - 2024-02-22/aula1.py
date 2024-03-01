@@ -12,7 +12,7 @@ import requests
 # todas as disciplinas disponíveis por semestre e ser aprovada
 # em todas elas. Ajude-a desenvolvendo um software:
 ano_inicial = 2024
-ano_final = ano_inicial + 3
+ano_final = ano_inicial + (6 / 2)
 # print(f"Ada iniciou o curso em {ano_inicial} e terminará em {ano_final}")
 
 # Exercício 2:
