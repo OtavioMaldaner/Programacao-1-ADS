@@ -1,31 +1,23 @@
-# Faça um programa que calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c.
-# O programa deverá pedir os valores de a, b e c e fazer as consistências, informando ao usuário nas seguintes situações:
-# Se o usuário informar o valor de A igual a zero, a equação não é do segundo grau e o programa não deve fazer pedir os demais valores,
-# sendo encerrado;
-# Se o delta calculado for negativo, a equação não possui raizes reais. Informe ao usuário e encerre o programa;
-# Se o delta calculado for igual a zero a equação possui apenas uma raiz real; informe-a ao usuário;
-# Se o delta for positivo, a equação possui duas raiz reais; informe-as ao usuário;
-import math
+from collections import Counter
+# Faça um Programa que peça os 3 lados de um triângulo. O programa deverá informar se os valores podem ser um triângulo.
+# Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno.
+# Dicas:
+# Três lados formam um triângulo quando a soma de quaisquer dois lados for maior que o terceiro;
+# Triângulo Equilátero: três lados iguais;
+# Triângulo Isósceles: quaisquer dois lados iguais;
+# Triângulo Escaleno: três lados diferentes;
+lado1 = float(input('Digite o primeiro lado do triangulo: '))
+lado2 = float(input('Digite o segundo lado do triangulo: '))
+lado3 = float(input('Digite o terceiro lado do triangulo: '))
 
-while True:
-    print("Calculadora de raízes de equação de segundo grau")
-    a = float(input("Insira o valor de A: "))
-    if a == 0:
-        print("O valor de A deve ser um numero diferente de 0")
-        break
-    b = float(input("Insira o valor de B: "))
-    c = float(input("Insira o valor de C: "))
-    delta = (b**2) - (4*a*c)
-    if delta < 0:
-        print("O delta é negativo!")
-        break
-    elif delta == 0:
-        x = (-b + math.sqrt(delta))/(2*a)
-        print(f"O valor da raiz é {x:.2f}")
-        break
+lados = [lado1, lado2, lado3]
+contador = Counter(lados)
+repetidos = {chave: valor for chave, valor in contador.items() if valor > 1}
+
+for item, contagem in repetidos.items():
+    if contagem == 3:
+        print("O triângulo é equilátero")
+    elif contagem == 2:
+        print("O triangulo é isóceles")
     else:
-        x1 = (-b - math.sqrt(delta))/(2*a)
-        x2 = (-b + math.sqrt(delta))/(2*a)
-        print(f"Os valores das raízes são: {x1:.2f} e {x2:.2f}")
-        break
-
+        print("O triangulo é escaleno")
